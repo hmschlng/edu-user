@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.dto.UserDto;
+import com.example.demo.dto.UserResponseDto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -24,12 +24,13 @@ public class UserService {
         this.appRunType = appRunType;
     }
 
-    public UserDto getUserByuserNo(String userNo) {
+    public UserResponseDto getUserByUserNo(String userNo) {
 
-        UserDto userDto = UserDto.builder()
+        return UserResponseDto.builder()
                 .userNo(userNo)
-                .userName(appRunType + "-" + userNo)
+                .userName("prod-" + userNo)
+                .goodsNo(userNo)
+                .goodsName("goods-prod-" + userNo)
                 .build();
-        return userDto;
     }
 }
