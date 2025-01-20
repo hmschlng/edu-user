@@ -1,11 +1,11 @@
-package com.example.demo.service;
+package com.example.user.service;
 
-import com.example.demo.dto.UserResponseDto;
+import com.example.user.dto.UserResponseDto;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
- * packageName    : com.example.demo.service
+ * packageName    : com.example.user.service
  * fileName       : UserService
  * author         : doong2s
  * date           : 2025. 1. 12.
