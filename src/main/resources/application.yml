@@ -1,3 +1,14 @@
 spring.application.name: edu-user
 
 app.run.type: default
+
+spring:
+  cloud:
+    kubernetes:
+      config:
+        enabled: true
+        name: external-api-config
+        namespace: edu-user
+
+api:
+  url: ${api.url}
