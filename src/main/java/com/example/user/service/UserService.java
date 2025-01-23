@@ -29,14 +29,14 @@ public class UserService {
     @Value("${app.run.type}")
     private String appRunType;
 
-    @Value("api.url")
+    @Value("${api.url}")
     private String goodsServiceUrl;
 
     private final RestTemplate restTemplate;
 
 
     public UserResponseDto getUserByUserNo(String userNo) {
-        String url = goodsServiceUrl + "/" + userNo;
+        String url = goodsServiceUrl + userNo;
 
         UserResponseDto.UserResponseDtoBuilder builder = UserResponseDto.builder()
                 .userNo(userNo)
